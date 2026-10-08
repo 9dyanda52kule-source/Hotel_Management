@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Room Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Hotel Room Booking System</h1>
+
+
+        <!-- Add Room -->
+        <div class="card">
+            <h2>Add Room</h2>
+
+            <input type="text" id="roomNo" placeholder="Room Number">
+
+            <select id="roomType">
+                <option value="">Select Room Type</option>
+                <option value="Single">Single</option>
+                <option value="Double">Double</option>
+                <option value="Suite">Suite</option>
+            </select>
+
+            <input type="number" id="roomPrice" placeholder="Room Price">
+
+            <button id="addRoomBtn">Add Room</button>
+        </div>
+
+
+        <!-- Search Available Rooms -->
+        <div class="card">
+            <h2>Search Available Rooms</h2>
+
+            <select id="searchType">
+                <option value="">Select Room Type</option>
+                <option value="Single">Single</option>
+                <option value="Double">Double</option>
+                <option value="Suite">Suite</option>
+            </select>
+
+            <label for="searchCheckIn">Check-in Date</label>
+            <input type="date" id="searchCheckIn">
+
+            <label for="searchCheckOut">Check-out Date</label>
+            <input type="date" id="searchCheckOut">
+
+            <button id="searchRoomBtn">Search Rooms</button>
+
+            <div id="searchResults"></div>
+        </div>
+
+
+        <!-- Available Rooms -->
+        <div class="card">
+            <h2>Available Rooms</h2>
+
+            <div id="roomsList">
+                <p>No rooms added yet.</p>
+            </div>
+        </div>
+
+
+        <!-- Book Room -->
+        <div class="card">
+            <h2>Book Room</h2>
+
+            <input type="number" id="bookRoomId" placeholder="Room ID">
+
+            <input type="text" id="guestName" placeholder="Guest Name">
+
+            <label>Check-in Date</label>
+            <input type="date" id="checkIn">
+
+            <label>Check-out Date</label>
+            <input type="date" id="checkOut">
+
+            <button id="bookRoomBtn">Book Room</button>
+        </div>
+
+
+        <!-- Bookings -->
+        <div class="card">
+            <h2>Bookings</h2>
+
+            <div id="bookingsList">
+                <p>No bookings yet.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

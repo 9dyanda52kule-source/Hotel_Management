@@ -1,0 +1,487 @@
+/* =========================================
+   HOTEL ROOM BOOKING SYSTEM
+   COLORFUL LUXURY HOTEL UI
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 35px 20px 60px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: #263238;
+
+    /* Colorful luxury hotel background */
+    background:
+        linear-gradient(
+            rgba(36, 57, 105, 0.48),
+            rgba(103, 66, 125, 0.38)
+        ),
+        url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2200&q=90");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+   ========================================= */
+
+.container {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   MAIN TITLE
+   ========================================= */
+
+h1 {
+    text-align: center;
+
+    margin: 0 0 35px;
+    padding: 24px 25px;
+
+    border-radius: 22px;
+
+    color: white;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 44px;
+    font-weight: normal;
+
+    letter-spacing: 1px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(24, 63, 138, 0.96),
+            rgba(93, 63, 154, 0.93)
+        );
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.24);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
+/* =========================================
+   SECTION HEADINGS
+   ========================================= */
+
+h2 {
+    margin: 0 0 22px;
+
+    color: #174ea6;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 28px;
+    font-weight: normal;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+
+/* =========================================
+   MAIN CARDS
+   ========================================= */
+
+.card {
+    position: relative;
+
+    margin-top: 25px;
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.96),
+            rgba(248, 250, 255, 0.92)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.85);
+
+    box-shadow:
+        0 15px 40px rgba(18, 39, 73, 0.18),
+        0 3px 10px rgba(18, 39, 73, 0.08);
+
+    backdrop-filter: blur(12px);
+
+    overflow: hidden;
+}
+
+
+/* Colorful top line */
+
+.card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    top: 0;
+
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #7c3aed,
+            #ec4899,
+            #f59e0b
+        );
+}
+
+
+/* =========================================
+   INPUTS & SELECTS
+   ========================================= */
+
+input,
+select {
+    display: block;
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    margin: 13px 0;
+
+    font-size: 15px;
+
+    color: #263238;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid #ccd6e5;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    transition:
+        0.2s ease;
+}
+
+input:hover,
+select:hover {
+    border-color: #94a9d1;
+}
+
+input:focus,
+select:focus {
+    border-color: #5968e8;
+
+    box-shadow:
+        0 0 0 4px rgba(89, 104, 232, 0.12);
+}
+
+
+/* =========================================
+   LABELS
+   ========================================= */
+
+.card label {
+    display: block;
+
+    margin-top: 15px;
+    margin-bottom: 6px;
+
+    color: #374151;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+button {
+    display: block;
+
+    width: 100%;
+
+    margin: 17px 0 5px;
+    padding: 14px 18px;
+
+    border: none;
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5,
+            #7c3aed
+        );
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 18px rgba(79, 70, 229, 0.28);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(79, 70, 229, 0.35);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   ROOM CARDS
+   ========================================= */
+
+.room-card {
+    position: relative;
+
+    margin-top: 14px;
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #edf5ff,
+            #f5efff
+        );
+
+    border: 1px solid #d5e0f3;
+
+    box-shadow:
+        0 6px 15px rgba(40, 70, 130, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(40, 70, 130, 0.13);
+}
+
+.room-card::after {
+    content: "🏨";
+
+    position: absolute;
+
+    right: 20px;
+    top: 17px;
+
+    font-size: 25px;
+}
+
+.room-card h3 {
+    color: #1d4f9d;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 21px;
+}
+
+.room-card p {
+    margin: 9px 0;
+
+    color: #425466;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   BOOKING CARDS
+   ========================================= */
+
+.booking-card {
+    position: relative;
+
+    margin-top: 14px;
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7e8,
+            #fff0f7
+        );
+
+    border: 1px solid #efd5b8;
+
+    box-shadow:
+        0 6px 15px rgba(180, 83, 9, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.booking-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(180, 83, 9, 0.13);
+}
+
+.booking-card::after {
+    content: "🛎️";
+
+    position: absolute;
+
+    right: 20px;
+    top: 17px;
+
+    font-size: 24px;
+}
+
+.booking-card h3 {
+    color: #a95b09;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 21px;
+}
+
+.booking-card p {
+    margin: 9px 0;
+
+    color: #4b5563;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   CANCEL BUTTON
+   ========================================= */
+
+.booking-card button {
+    background:
+        linear-gradient(
+            135deg,
+            #ef4444,
+            #dc2626,
+            #b91c1c
+        );
+
+    box-shadow:
+        0 7px 17px rgba(220, 38, 38, 0.22);
+}
+
+.booking-card button:hover {
+    box-shadow:
+        0 11px 23px rgba(220, 38, 38, 0.30);
+}
+
+
+/* =========================================
+   SEARCH RESULTS
+   ========================================= */
+
+#searchResults {
+    margin-top: 20px;
+}
+
+
+/* =========================================
+   EMPTY MESSAGES
+   ========================================= */
+
+#roomsList > p,
+#bookingsList > p,
+#searchResults > p {
+    padding: 15px;
+
+    margin: 12px 0;
+
+    border-radius: 11px;
+
+    text-align: center;
+
+    color: #64748b;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7f9fc,
+            #eef3ff
+        );
+
+    border: 1px dashed #c5d1e2;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px 12px 40px;
+    }
+
+    h1 {
+        font-size: 31px;
+        padding: 20px 15px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    .card {
+        padding: 21px;
+        border-radius: 16px;
+    }
+
+    .room-card,
+    .booking-card {
+        padding: 17px;
+    }
+}

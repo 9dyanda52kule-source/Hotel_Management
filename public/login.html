@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hotel Booking - Login</title>
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="login-page">
+
+        <!-- LEFT SIDE -->
+        <div class="hotel-side">
+
+            <div class="hotel-overlay">
+
+                <div class="hotel-brand">
+                    <div class="logo">H</div>
+
+                    <div>
+                        <h2>HAVEN</h2>
+                        <span>HOTELS & RESORTS</span>
+                    </div>
+                </div>
+
+                <div class="welcome-text">
+                    <p class="small-title">WELCOME TO</p>
+
+                    <h1>
+                        Your comfort,<br>
+                        our priority.
+                    </h1>
+
+                    <p>
+                        Manage rooms, reservations and
+                        guest bookings with ease.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+        <div class="login-side">
+
+            <div class="login-card">
+
+                <div class="mobile-logo">
+                    <div class="logo">H</div>
+                </div>
+
+                <p class="welcome-small">
+                    HOTEL MANAGEMENT
+                </p>
+
+                <h1>Welcome Back</h1>
+
+                <p class="subtitle">
+                    Sign in to access your booking dashboard
+                </p>
+
+
+                <form id="loginForm">
+
+                    <label for="username">
+                        Username
+                    </label>
+
+                    <div class="input-box">
+
+                        <span>👤</span>
+
+                        <input
+                            type="text"
+                            id="username"
+                            placeholder="Enter your username"
+                            required
+                        >
+
+                    </div>
+
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="input-box">
+
+                        <span>🔒</span>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button type="submit">
+                        Sign In
+                        <span class="arrow">→</span>
+                    </button>
+
+
+                    <p id="loginMessage"></p>
+
+                </form>
+
+
+                <div class="login-footer">
+                    Hotel Room Booking System
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        document
+            .getElementById("loginForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                const username =
+                    document.getElementById("username").value.trim();
+
+                const password =
+                    document.getElementById("password").value;
+
+                const message =
+                    document.getElementById("loginMessage");
+
+
+                if (username === "admin" && password === "hotel123") {
+
+                    message.textContent =
+                        "Login successful!";
+
+                    message.className = "success";
+
+
+                    setTimeout(function() {
+
+                        window.location.href = "/index.html";
+
+                    }, 500);
+
+                } else {
+
+                    message.textContent =
+                        "Invalid username or password.";
+
+                    message.className = "error";
+                }
+
+            });
+
+    </script>
+
+</body>
+
+</html>
